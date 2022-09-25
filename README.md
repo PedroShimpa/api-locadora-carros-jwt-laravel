@@ -9,7 +9,11 @@
 2ºExecute php artisan migrate --seed para incluir as tabelas essenciais e o usuario 
 3º O usuario padrão é email: teste@locadora.com e password: 123456
 
-A coolection do postman com os endpoints do projeto estão disponiveis na raiz do projeto em:
+A colection do postman com os endpoints do projeto estão disponiveis na raiz do projeto em: Locadora de Carros - API.postman_collection.json
+
+
+
+
 
 
 

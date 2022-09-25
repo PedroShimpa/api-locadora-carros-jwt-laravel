@@ -1,0 +1,3217 @@
+{
+	"info": {
+		"_postman_id": "6b6111a5-755c-48fa-b9d6-ec7bd733102d",
+		"name": "Locadora de Carros - API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16383254"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/auth/login?email=teste@locadora.com&password=123456",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "teste@locadora.com"
+								},
+								{
+									"key": "password",
+									"value": "123456"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_link}}/cliente",
+							"host": [
+								"{{api_link}}"
+							],
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/cliente",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"cliente"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 16:41:30 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 16:41:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						}
+					]
+				},
+				{
+					"name": "Store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/cliente?nome=pedro falconi",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"cliente"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "pedro falconi"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "402",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/cliente",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"cliente"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 16:46:01 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 16:46:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The given data was invalid.\",\n    \"errors\": {\n        \"nome\": [\n            \"O campo nome é obrigatório.\"\n        ]\n    }\n}"
+						},
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/cliente?nome=pedro falconi",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"cliente"
+									],
+									"query": [
+										{
+											"key": "nome",
+											"value": "pedro falconi"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 16:46:18 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 16:46:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"nome\": \"pedro falconi\",\n    \"updated_at\": \"2022-09-25T16:46:18.000000Z\",\n    \"created_at\": \"2022-09-25T16:46:18.000000Z\",\n    \"id\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/cliente/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"cliente",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/cliente/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"cliente",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 16:46:40 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 16:46:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"nome\": \"pedro falconi\"\n}"
+						}
+					]
+				},
+				{
+					"name": "edit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/cliente/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"cliente",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "402",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/cliente/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"cliente",
+										"1"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 16:47:14 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 16:47:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The given data was invalid.\",\n    \"errors\": {\n        \"nome\": [\n            \"O campo nome é obrigatório.\"\n        ]\n    }\n}"
+						},
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/cliente/1?nome=felipe",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"cliente",
+										"1"
+									],
+									"query": [
+										{
+											"key": "nome",
+											"value": "felipe"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 16:47:32 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 16:47:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "1"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/cliente/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"cliente",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 16:48:10 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 16:48:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Marca",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY2NDEzMTc3MSwiZXhwIjoxNjY0MTM1MzcxLCJuYmYiOjE2NjQxMzE3NzEsImp0aSI6IjVlR25ETDVlcmhuTlJydjQiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.AjoyXgUPjqu9yf4ONAwNx_Ygv-iJusbTAvfQmxoAscM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/marca",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"marca"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/marca",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"marca"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 15:24:48 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 15:24:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"nome\": \"Renaout\",\n        \"imagem\": \"https://logosmarcas.net/wp-content/uploads/2021/04/Renault-Logo.png\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/marca?nome=Renaout&imagem=https://logosmarcas.net/wp-content/uploads/2021/04/Renault-Logo.png",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"marca"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "Renaout"
+								},
+								{
+									"key": "imagem",
+									"value": "https://logosmarcas.net/wp-content/uploads/2021/04/Renault-Logo.png"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "402",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/marca",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"marca"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 15:12:00 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 15:12:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The given data was invalid.\",\n    \"errors\": {\n        \"nome\": [\n            \"O campo nome é obrigatório.\"\n        ],\n        \"imagem\": [\n            \"O campo imagem é obrigatório.\"\n        ]\n    }\n}"
+						},
+						{
+							"name": "500",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/marca?nome=Renaout&imagem=https://logosmarcas.net/wp-content/uploads/2021/04/Renault-Logo.png",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"marca"
+									],
+									"query": [
+										{
+											"key": "nome",
+											"value": "Renaout"
+										},
+										{
+											"key": "imagem",
+											"value": "https://logosmarcas.net/wp-content/uploads/2021/04/Renault-Logo.png"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 15:20:51 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 15:20:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Erro inesperado ao incluir registro\"\n}"
+						},
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/marca?nome=Renaout&imagem=https://logosmarcas.net/wp-content/uploads/2021/04/Renault-Logo.png",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"marca"
+									],
+									"query": [
+										{
+											"key": "nome",
+											"value": "Renaout"
+										},
+										{
+											"key": "imagem",
+											"value": "https://logosmarcas.net/wp-content/uploads/2021/04/Renault-Logo.png"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 15:21:42 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 15:21:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"nome\": \"Renaout\",\n    \"imagem\": \"https://logosmarcas.net/wp-content/uploads/2021/04/Renault-Logo.png\",\n    \"updated_at\": \"2022-09-25T15:21:42.000000Z\",\n    \"created_at\": \"2022-09-25T15:21:42.000000Z\",\n    \"id\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/marca/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"marca",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/marca/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"marca",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 15:29:51 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 15:29:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"nome\": \"Renaout\",\n    \"imagem\": \"https://logosmarcas.net/wp-content/uploads/2021/04/Renault-Logo.png\"\n}"
+						},
+						{
+							"name": "500",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/marca/1UDSHFHSDUGHSDUFGH4R578G458T75348T3457979CHVUFGHUDRFGHDFUSVHFXDUBHDFGUBVHDU",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"marca",
+										"1UDSHFHSDUGHSDUFGH4R578G458T75348T3457979CHVUFGHUDRFGHDFUSVHFXDUBHDFGUBVHDU"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 15:30:12 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 15:30:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"A non well formed numeric value encountered\",\n    \"exception\": \"ErrorException\",\n    \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\app\\\\Http\\\\Controllers\\\\MarcaController.php\",\n    \"line\": 52,\n    \"trace\": [\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\app\\\\Http\\\\Controllers\\\\MarcaController.php\",\n            \"line\": 52,\n            \"function\": \"handleError\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Bootstrap\\\\HandleExceptions\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Controller.php\",\n            \"line\": 54,\n            \"function\": \"show\",\n            \"class\": \"App\\\\Http\\\\Controllers\\\\MarcaController\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\ControllerDispatcher.php\",\n            \"line\": 45,\n            \"function\": \"callAction\",\n            \"class\": \"Illuminate\\\\Routing\\\\Controller\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Route.php\",\n            \"line\": 262,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\ControllerDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Route.php\",\n            \"line\": 205,\n            \"function\": \"runController\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 721,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 128,\n            \"function\": \"Illuminate\\\\Routing\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\SubstituteBindings.php\",\n            \"line\": 50,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\SubstituteBindings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n            \"line\": 127,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n            \"line\": 103,\n            \"function\": \"handleRequest\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n            \"line\": 55,\n            \"function\": \"handleRequestUsingNamedLimiter\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 103,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 723,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 698,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 662,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 651,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 167,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 128,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings.php\",\n            \"line\": 40,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\app\\\\Http\\\\Middleware\\\\JsonRequestMiddleware.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"App\\\\Http\\\\Middleware\\\\JsonRequestMiddleware\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance.php\",\n            \"line\": 86,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\fruitcake\\\\laravel-cors\\\\src\\\\HandleCors.php\",\n            \"line\": 52,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Fruitcake\\\\Cors\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\TrustProxies.php\",\n            \"line\": 39,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 167,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 103,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 142,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 111,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\public\\\\index.php\",\n            \"line\": 52,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\xampp\\\\htdocs\\\\api-locadora-carros\\\\server.php\",\n            \"line\": 21,\n            \"function\": \"require_once\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "edit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/marca/1?nome=felipe",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"marca",
+								"1"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "felipe"
+								},
+								{
+									"key": "imagem",
+									"value": "https://i.pinimg.com/originals/f5/ac/15/f5ac1518c0a97c0346fa3e82084ef9c0.jpg",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/marca/1?nome=felipe&imagem=https://i.pinimg.com/originals/f5/ac/15/f5ac1518c0a97c0346fa3e82084ef9c0.jpg",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"marca",
+										"1"
+									],
+									"query": [
+										{
+											"key": "nome",
+											"value": "felipe"
+										},
+										{
+											"key": "imagem",
+											"value": "https://i.pinimg.com/originals/f5/ac/15/f5ac1518c0a97c0346fa3e82084ef9c0.jpg"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 16:33:47 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 16:33:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "1"
+						},
+						{
+							"name": "402",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/marca/1?nome=felipe",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"marca",
+										"1"
+									],
+									"query": [
+										{
+											"key": "nome",
+											"value": "felipe"
+										},
+										{
+											"key": "imagem",
+											"value": "https://i.pinimg.com/originals/f5/ac/15/f5ac1518c0a97c0346fa3e82084ef9c0.jpg",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 16:34:11 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 16:34:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The given data was invalid.\",\n    \"errors\": {\n        \"nome\": [\n            \"O campo nome já está sendo utilizado.\"\n        ],\n        \"imagem\": [\n            \"O campo imagem é obrigatório.\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/marca/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"marca",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/marca/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"marca",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 16:35:56 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 16:35:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Modelo",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/modelo",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"modelo"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/modelo",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"modelo"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 17:00:43 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 17:00:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						}
+					]
+				},
+				{
+					"name": "Store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/modelo?nome=Clio&marca_id=2&imagem=https://blog.usadosbr.com/wp-content/uploads/2016/10/Renault-Clio.jpg&numero_portas=4&lugares=4&air_bag=0&abs=0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"modelo"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "Clio"
+								},
+								{
+									"key": "marca_id",
+									"value": "2",
+									"description": "precisa existir"
+								},
+								{
+									"key": "imagem",
+									"value": "https://blog.usadosbr.com/wp-content/uploads/2016/10/Renault-Clio.jpg"
+								},
+								{
+									"key": "numero_portas",
+									"value": "4",
+									"description": "default 4"
+								},
+								{
+									"key": "lugares",
+									"value": "4",
+									"description": "default 5"
+								},
+								{
+									"key": "air_bag",
+									"value": "0",
+									"description": "default 1"
+								},
+								{
+									"key": "abs",
+									"value": "0",
+									"description": "default 1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "402",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/modelo",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"modelo"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 17:02:20 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 17:02:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The given data was invalid.\",\n    \"errors\": {\n        \"nome\": [\n            \"O campo nome é obrigatório.\"\n        ],\n        \"marca_id\": [\n            \"O campo marca id é obrigatório.\"\n        ],\n        \"imagem\": [\n            \"O campo imagem é obrigatório.\"\n        ]\n    }\n}"
+						},
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/modelo?nome=Clio&marca_id=2&imagem=https://blog.usadosbr.com/wp-content/uploads/2016/10/Renault-Clio.jpg&numero_portas=4&lugares=4&air_bag=0&abs=0",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"modelo"
+									],
+									"query": [
+										{
+											"key": "nome",
+											"value": "Clio"
+										},
+										{
+											"key": "marca_id",
+											"value": "2",
+											"description": "precisa existir"
+										},
+										{
+											"key": "imagem",
+											"value": "https://blog.usadosbr.com/wp-content/uploads/2016/10/Renault-Clio.jpg"
+										},
+										{
+											"key": "numero_portas",
+											"value": "4",
+											"description": "default 4"
+										},
+										{
+											"key": "lugares",
+											"value": "4",
+											"description": "default 5"
+										},
+										{
+											"key": "air_bag",
+											"value": "0",
+											"description": "default 1"
+										},
+										{
+											"key": "abs",
+											"value": "0",
+											"description": "default 1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 17:09:37 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 17:09:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"nome\": \"Clio\",\n    \"marca_id\": \"2\",\n    \"imagem\": \"https://blog.usadosbr.com/wp-content/uploads/2016/10/Renault-Clio.jpg\",\n    \"numero_portas\": \"4\",\n    \"lugares\": \"4\",\n    \"air_bag\": \"0\",\n    \"abs\": \"0\",\n    \"updated_at\": \"2022-09-25T17:09:37.000000Z\",\n    \"created_at\": \"2022-09-25T17:09:37.000000Z\",\n    \"id\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/modelo/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"modelo",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/modelo/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"modelo",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 17:11:45 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 17:11:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"nome\": \"Clio EXPRESSION 1.6\",\n    \"marca_id\": 2,\n    \"imagem\": \"https://blog.usadosbr.com/wp-content/uploads/2016/10/Renault-Clio.jpg\",\n    \"numero_portas\": 4,\n    \"lugares\": 4,\n    \"air_bag\": 0,\n    \"abs\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY2NDEzMTc3MSwiZXhwIjoxNjY0MTM1MzcxLCJuYmYiOjE2NjQxMzE3NzEsImp0aSI6IjVlR25ETDVlcmhuTlJydjQiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.AjoyXgUPjqu9yf4ONAwNx_Ygv-iJusbTAvfQmxoAscM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/modelo/1?nome=Clio EXPRESSION 1.6&marca_id=2&imagem=https://blog.usadosbr.com/wp-content/uploads/2016/10/Renault-Clio.jpg&numero_portas=4&lugares=4&air_bag=0&abs=0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"modelo",
+								"1"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "Clio EXPRESSION 1.6"
+								},
+								{
+									"key": "marca_id",
+									"value": "2",
+									"description": "precisa existir"
+								},
+								{
+									"key": "imagem",
+									"value": "https://blog.usadosbr.com/wp-content/uploads/2016/10/Renault-Clio.jpg"
+								},
+								{
+									"key": "numero_portas",
+									"value": "4",
+									"description": "default 4"
+								},
+								{
+									"key": "lugares",
+									"value": "4",
+									"description": "default 5"
+								},
+								{
+									"key": "air_bag",
+									"value": "0",
+									"description": "default 1"
+								},
+								{
+									"key": "abs",
+									"value": "0",
+									"description": "default 1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/modelo/1?nome=Clio EXPRESSION 1.6&marca_id=2&imagem=https://blog.usadosbr.com/wp-content/uploads/2016/10/Renault-Clio.jpg&numero_portas=4&lugares=4&air_bag=0&abs=0",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"modelo",
+										"1"
+									],
+									"query": [
+										{
+											"key": "nome",
+											"value": "Clio EXPRESSION 1.6"
+										},
+										{
+											"key": "marca_id",
+											"value": "2",
+											"description": "precisa existir"
+										},
+										{
+											"key": "imagem",
+											"value": "https://blog.usadosbr.com/wp-content/uploads/2016/10/Renault-Clio.jpg"
+										},
+										{
+											"key": "numero_portas",
+											"value": "4",
+											"description": "default 4"
+										},
+										{
+											"key": "lugares",
+											"value": "4",
+											"description": "default 5"
+										},
+										{
+											"key": "air_bag",
+											"value": "0",
+											"description": "default 1"
+										},
+										{
+											"key": "abs",
+											"value": "0",
+											"description": "default 1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 17:10:23 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 17:10:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "1"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/modelo/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"modelo",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/modelo/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"modelo",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 17:12:59 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 17:12:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Carros",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/carro",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"carro"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/carro",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"carro"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 17:19:21 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 17:19:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						}
+					]
+				},
+				{
+					"name": "Store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/carro?modelo_id=2&placa=FTG-2343&km=100000&disponivel=0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"carro"
+							],
+							"query": [
+								{
+									"key": "modelo_id",
+									"value": "2",
+									"description": "Precisa Existir"
+								},
+								{
+									"key": "placa",
+									"value": "FTG-2343"
+								},
+								{
+									"key": "km",
+									"value": "100000"
+								},
+								{
+									"key": "disponivel",
+									"value": "0",
+									"description": "default 1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "402",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/carro",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"carro"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 17:20:04 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 17:20:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The given data was invalid.\",\n    \"errors\": {\n        \"modelo_id\": [\n            \"O campo modelo id é obrigatório.\"\n        ],\n        \"placa\": [\n            \"O campo placa é obrigatório.\"\n        ],\n        \"km\": [\n            \"O campo km é obrigatório.\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/carro/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"carro",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/carro/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"carro",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 17:22:19 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 17:22:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"modelo_id\": 2,\n    \"placa\": \"FTG-2343\",\n    \"disponivel\": 0,\n    \"km\": 100000\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/carro/1?modelo_id=2&placa=FTG-2343&km=100000&disponivel=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"carro",
+								"1"
+							],
+							"query": [
+								{
+									"key": "modelo_id",
+									"value": "2"
+								},
+								{
+									"key": "placa",
+									"value": "FTG-2343"
+								},
+								{
+									"key": "km",
+									"value": "100000"
+								},
+								{
+									"key": "disponivel",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/carro/1?modelo_id=2&placa=FTG-2345&km=100000&disponivel=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"carro",
+										"1"
+									],
+									"query": [
+										{
+											"key": "modelo_id",
+											"value": "2"
+										},
+										{
+											"key": "placa",
+											"value": "FTG-2345"
+										},
+										{
+											"key": "km",
+											"value": "100000"
+										},
+										{
+											"key": "disponivel",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 17:26:36 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 17:26:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "1"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/carro/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"carro",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/carro/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"carro",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 17:28:03 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 17:28:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "1"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Locacoes",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/locacao",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"locacao"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/locacao",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"locacao"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 17:34:50 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 17:34:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						}
+					]
+				},
+				{
+					"name": "Store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/locacao?cliente_id=1&carro_id=1&data_inicio_periodo=2020-04-10&valor_diaria=20.10&km_inicial=3000",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"locacao"
+							],
+							"query": [
+								{
+									"key": "cliente_id",
+									"value": "1",
+									"description": "PRECISA EXISTIR"
+								},
+								{
+									"key": "carro_id",
+									"value": "1",
+									"description": "PRECISA EXISTIR"
+								},
+								{
+									"key": "data_inicio_periodo",
+									"value": "2020-04-10",
+									"description": "Y-m-d"
+								},
+								{
+									"key": "valor_diaria",
+									"value": "20.10"
+								},
+								{
+									"key": "km_inicial",
+									"value": "3000"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "402",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/locacao?cliente_id=1&carro_id=1&data_inicio_periodo&data_final_periodo&valor_diaria&km_inicial",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"locacao"
+									],
+									"query": [
+										{
+											"key": "cliente_id",
+											"value": "1",
+											"description": "PRECISA EXISTIR"
+										},
+										{
+											"key": "carro_id",
+											"value": "1",
+											"description": "PRECISA EXISTIR"
+										},
+										{
+											"key": "data_inicio_periodo",
+											"value": null
+										},
+										{
+											"key": "data_final_periodo",
+											"value": null
+										},
+										{
+											"key": "valor_diaria",
+											"value": null
+										},
+										{
+											"key": "km_inicial",
+											"value": null
+										}
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 17:40:38 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 17:40:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The given data was invalid.\",\n    \"errors\": {\n        \"cliente_id\": [\n            \"O campo cliente id selecionado é inválido.\"\n        ],\n        \"carro_id\": [\n            \"O campo carro id selecionado é inválido.\"\n        ],\n        \"data_inicio_periodo\": [\n            \"O campo data inicio periodo é obrigatório.\"\n        ],\n        \"valor_diaria\": [\n            \"O campo valor diaria é obrigatório.\"\n        ],\n        \"km_inicial\": [\n            \"O campo km inicial é obrigatório.\"\n        ]\n    }\n}"
+						},
+						{
+							"name": "500",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/locacao?cliente_id=2&carro_id=2&data_inicio_periodo=2020-04-10&valor_diaria=20.10&km_inicial=3000",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"locacao"
+									],
+									"query": [
+										{
+											"key": "cliente_id",
+											"value": "2",
+											"description": "PRECISA EXISTIR"
+										},
+										{
+											"key": "carro_id",
+											"value": "2",
+											"description": "PRECISA EXISTIR"
+										},
+										{
+											"key": "data_inicio_periodo",
+											"value": "2020-04-10",
+											"description": "Y-m-d"
+										},
+										{
+											"key": "valor_diaria",
+											"value": "20.10"
+										},
+										{
+											"key": "km_inicial",
+											"value": "3000"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 18:03:07 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 18:03:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Erro inesperado ao incluir registro\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/locacao/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"locacao",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 18:05:33 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 18:05:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"cliente_id\": 1,\n    \"carro_id\": 1,\n    \"data_inicio_periodo\": \"2020-04-10 00:00:00\",\n    \"data_final_periodo\": null,\n    \"valor_diaria\": \"20.10\",\n    \"km_inicial\": 3000,\n    \"km_final\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/locacao/1?cliente_id=1&carro_id=1&data_inicio_periodo=2020-04-10&data_final_previsto_periodo=2020-04-12&valor_diaria=20.10&km_inicial=3000&km_final=3500",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"locacao",
+								"1"
+							],
+							"query": [
+								{
+									"key": "cliente_id",
+									"value": "1"
+								},
+								{
+									"key": "carro_id",
+									"value": "1"
+								},
+								{
+									"key": "data_inicio_periodo",
+									"value": "2020-04-10"
+								},
+								{
+									"key": "data_final_previsto_periodo",
+									"value": "2020-04-12"
+								},
+								{
+									"key": "valor_diaria",
+									"value": "20.10"
+								},
+								{
+									"key": "km_inicial",
+									"value": "3000"
+								},
+								{
+									"key": "km_final",
+									"value": "3500"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/locacao/1?cliente_id=1&carro_id=1&data_inicio_periodo=2020-04-10&data_final_previsto_periodo=2020-04-12&valor_diaria=20.10&km_inicial=3000&km_final=3500&veiculo_entregue=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"locacao",
+										"1"
+									],
+									"query": [
+										{
+											"key": "cliente_id",
+											"value": "1"
+										},
+										{
+											"key": "carro_id",
+											"value": "1"
+										},
+										{
+											"key": "data_inicio_periodo",
+											"value": "2020-04-10"
+										},
+										{
+											"key": "data_final_previsto_periodo",
+											"value": "2020-04-12"
+										},
+										{
+											"key": "valor_diaria",
+											"value": "20.10"
+										},
+										{
+											"key": "km_inicial",
+											"value": "3000"
+										},
+										{
+											"key": "km_final",
+											"value": "3500",
+											"description": "ira atualizar o carro"
+										},
+										{
+											"key": "veiculo_entregue",
+											"value": "1",
+											"description": "se definido como 1 ira deixar o carro disponivel novamente"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 18:07:07 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 18:07:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "1"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/locacao/1?",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"locacao",
+								"1"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/locacao/1?",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"locacao",
+										"1"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 18:07:40 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Sep 2022 18:07:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.33"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "1"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY2NDEzMTc3MSwiZXhwIjoxNjY0MTM1MzcxLCJuYmYiOjE2NjQxMzE3NzEsImp0aSI6IjVlR25ETDVlcmhuTlJydjQiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.AjoyXgUPjqu9yf4ONAwNx_Ygv-iJusbTAvfQmxoAscM",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "api_link",
+			"value": "http://127.0.0.1:8000/api"
+		},
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8000/"
+		},
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000"
+		}
+	]
+}
