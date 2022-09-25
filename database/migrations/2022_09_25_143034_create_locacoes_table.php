@@ -15,8 +15,8 @@ class CreateLocacoesTable extends Migration
     {
         Schema::create('locacoes', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('cliente_id')->constrained('clientes');
-            $table->foreignId('carro_id')->constrained('carros');
+            $table->foreignId('cliente_id')->constrained('clientes')->onDelete('cascade');
+            $table->foreignId('carro_id')->constrained('carros')->onDelete('cascade');
             $table->dateTime('data_inicio_periodo');
             $table->dateTime('data_final_previsto_periodo');
             $table->dateTime('data_final_periodo')->nullable();
